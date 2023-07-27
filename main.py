@@ -6,9 +6,8 @@ from dataManager.files import Files
 
 if __name__ == "__main__":
 
-    # Initialize API client class
+    # Makes requests to MusixMatch API
     api_client = ApiClient()
-
 
     #----- Top Charts Endpoints -----
 
@@ -17,7 +16,6 @@ if __name__ == "__main__":
 
     Charts.print_top_songs(response)
     # Charts.print_top_songs(response)
-
 
     #----- Debug -----
 
