@@ -1,22 +1,27 @@
-from networking.api_client import ApiClient
+from networking.client import ApiClient
 from networking.endpoints import Endpoints
 from dataManager.charts import Charts
 
-import json
 
 if __name__ == "__main__":
 
     api_client = ApiClient()
 
-    # response = api_client.get(Endpoints.Artists.TOP)
-    response = api_client.get(Endpoints.Songs.TOP)
+    #----- TOP CHARTS ENDPOINTS -----
 
+    response = api_client.get(Endpoints.Chart.SONGS)
+    # response = api_client.get(Endpoints.Chart.ARTISTS)
+
+    Charts().print_top_songs(response)
+    # Charts().print_top_songs(response)
+
+    #----- Debug -----
+
+    # Write response json to file for debugging.
     # with open("response.json", "w") as outfile:
     #     json.dump(response, outfile)
 
-    # ArtistsManager().print_top_artists(response)
-
-    Charts().print_top_songs(response)
+    
 
     
     
