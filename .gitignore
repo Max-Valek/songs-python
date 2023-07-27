@@ -36,3 +36,6 @@ Pipfile.lock
 *~
 .DS_Store
 Thumbs.db
+
+# Test JSON data
+*.json
