@@ -1,7 +1,7 @@
 # Information about API responses
 class Status:
 
-    # Return message associated with a status code.
+    # Returns a message associated with a specified status code.
     @staticmethod
     def get_message(status_code):
         match status_code:

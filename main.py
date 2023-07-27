@@ -12,7 +12,7 @@ if __name__ == "__main__":
     response = api_client.get(Endpoints.Chart.SONGS)
     # response = api_client.get(Endpoints.Chart.ARTISTS)
 
-    Charts().print_top_songs(response)
+    Charts.print_top_songs(response)
     # Charts().print_top_songs(response)
 
     #----- Debug -----
