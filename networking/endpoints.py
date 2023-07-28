@@ -1,7 +1,7 @@
 # Endpoints associated with requests to MusixMatch API.
 class Endpoints:
 
-    """Parameters:
+    """All MusixMatch API Parameters:
 
     Authentication
         apikey: personal api key
@@ -48,6 +48,36 @@ class Endpoints:
 
     Localization
         country:                country code of desired country
+    """
+
+    """All MusixMatch API Endpoints:
+
+    chart.artists.get                       Get the list of the top artists of a given country.
+    chart.tracks.get                        Get the list of the top songs of a given country.
+    track.search                            Search for a song.
+    track.get                               Get song info (title, artist, isrc(s), instrumental flag).
+    track.lyrics.get                        Get the lyrics of a song.
+    track.lyrics.post                       Submit lyrics to the MusixMatch database.
+    track.lyrics.mood.get                   Get the mood list (and raw value that generated it) of a songs lyrics.
+    track.snippet.get                       Get a snippet of a song's lyrics.
+    track.subtitle.get                      Get the subtitle of a song.
+    track.richsync.get                      Get the rich sync for a song.
+    track.lyrics.translation.get            Get a songs lyrics for a given language
+    track.subtitle.translation.get          Get a translated subtitle for a given language.
+    music.genres.get                        Get a list of music genres.
+    matcher.lyrics.get                      Get the lyrics for a song based on title and artist.
+    matcher.track.get                       Match a song against the MusixMatch database.
+    matcher.subtitle.get                    Get the subtitles for a song given its title, artist, and duration.
+    artist.get                              Get data about an artist.
+    artist.search                           Search for an artist.
+    artist.albums.get                       Get the album discography of an artist.
+    artist.related.get                      Get a list of artists somehow related to a given one.
+    album.get                               Get an album with a given id.
+    album.tracks.get                        Get the list of songs for an album.
+    tracking.url.get                        Get the base url for the tracking script.
+    catalogue.dump.get                      Get the list of MusixMatch songs with the last updated information.
+    work.post                               Submit a work's details.
+    work.validity.post                      Submit relinquishment for a work.
     """
 
     # Top charts endpoints
