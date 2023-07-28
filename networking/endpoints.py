@@ -52,20 +52,37 @@ class Endpoints:
 
     # Top charts endpoints
     class Chart:
-        """
-        Get the list of the top artists of a given country.
+        """Get the list of the top artists.
 
         TODO: implement params: 
-            country: a valid country code (default: us), 
-            page: page number for paginated results, 
-            page_size: page size for paginated results (1 to 100), 
-            format: the output type, json or xml (default json)
+            country:    a valid country code (default: us), 
+            page:       page number for paginated results, 
+            page_size:  page size for paginated results (1 to 100), 
+            format:     the output type, json or xml (default json)
         """
         ARTISTS = "/chart.artists.get?page=1&page_size=5"
 
-        """
-        Get the list of the top songs of a given country.
+        """Get the list of the top songs.
 
         TODO: implement params: country, page, page_size, chart_name, f_has_lyrics
         """
         SONGS = "/chart.tracks.get?chart_name=top&page=1&page_size=5"
+
+    # Searching endpoints
+    class Search:
+        """Search for an artist.
+
+        Params:
+            q_artist:       the song artist
+            f_artist_id:    when set, filter by this artist id
+            f_artist_mbid:  when set, filter by this artist musicbrainz id
+            page:           page number for paginated results
+            page_size:      define the page size for paginated results (1 to 100)
+            format:         output type, json (default) or xml
+        """
+        ARTIST = "/artist.search?q_artist=travis&page_size=5"
+
+        """Search for a song.
+        """
+        SONG = ""
+

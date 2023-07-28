@@ -2,6 +2,7 @@ from networking.client import ApiClient
 from networking.endpoints import Endpoints
 from dataManager.charts import Charts
 from dataManager.files import Files
+from dataManager.search import Search
 
 
 if __name__ == "__main__":
@@ -11,16 +12,22 @@ if __name__ == "__main__":
 
     #----- Top Charts Endpoints -----
 
-    response = api_client.get(Endpoints.Chart.SONGS)
+    # response = api_client.get(Endpoints.Chart.SONGS)
     # response = api_client.get(Endpoints.Chart.ARTISTS)
 
-    Charts.print_top_songs(response)
     # Charts.print_top_songs(response)
+    # Charts.print_top_songs(response)
+
+    #----- Search Endpoints -----
+
+    response = api_client.get(Endpoints.Search.ARTIST)
+
+    Search.print_search_artists(response)
 
     #----- Debug -----
 
     # Write response json to file.
-    Files.save_as_json(response, "response.json")
+    # Files.save_as_json(response, "response.json")
 
     
 
