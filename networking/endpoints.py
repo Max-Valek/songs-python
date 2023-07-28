@@ -60,13 +60,13 @@ class Endpoints:
             page_size:  page size for paginated results (1 to 100), 
             format:     the output type, json or xml (default json)
         """
-        ARTISTS = "/chart.artists.get?page=1&page_size=5"
+        ARTISTS = "chart.artists.get?page=1&page_size=5"
 
         """Get the list of the top songs.
 
         TODO: implement params: country, page, page_size, chart_name, f_has_lyrics
         """
-        SONGS = "/chart.tracks.get?chart_name=top&page=1&page_size=5"
+        SONGS = "chart.tracks.get?chart_name=top&page=1&page_size=5"
 
     # Searching endpoints
     class Search:
@@ -80,9 +80,9 @@ class Endpoints:
             page_size:      define the page size for paginated results (1 to 100)
             format:         output type, json (default) or xml
         """
-        ARTIST = "/artist.search?q_artist=travis&page_size=5"
+        ARTIST = "artist.search?q_artist=travis&page_size=5"
 
         """Search for a song.
         """
-        SONG = ""
+        SONG = "track.search?q_track=shabba&page_size=3&page=1&s_track_rating=desc"
 

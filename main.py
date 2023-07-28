@@ -20,9 +20,11 @@ if __name__ == "__main__":
 
     #----- Search Endpoints -----
 
-    response = api_client.get(Endpoints.Search.ARTIST)
+    # response = api_client.get(Endpoints.Search.ARTIST)
+    response = api_client.get(Endpoints.Search.SONG)
 
-    Search.print_search_artists(response)
+    # Search.print_search_artists(response)
+    Search.print_search_songs(response)
 
     #----- Debug -----
 
