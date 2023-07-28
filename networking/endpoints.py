@@ -84,5 +84,5 @@ class Endpoints:
 
         """Search for a song.
         """
-        SONG = "track.search?q_track=shabba&page_size=3&page=1&s_track_rating=desc"
+        SONG = "track.search?q_track=3500&page_size=3&page=1&s_track_rating=desc"
 

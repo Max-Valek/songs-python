@@ -1,6 +1,6 @@
 import json
 
-# Artist object class.
+# Song object class.
 class Song:
 
     def __init__(self, data):

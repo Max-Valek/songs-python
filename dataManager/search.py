@@ -7,7 +7,12 @@ class Search:
 
     @staticmethod
     def print_search_artists(data):
-        # d = json.loads(data)
+        """Print the list of artists returned from a search.
+
+        Params:
+            data:   The search request response json.
+        """
+
         artist_list = data["message"]["body"]["artist_list"]
         artists = []
         for artist_data in artist_list:
@@ -19,6 +24,12 @@ class Search:
 
     @staticmethod
     def print_search_songs(data):
+        """Print the list of songs returned from a search.
+
+        Params:
+            data:   The search request response json.
+        """
+        
         song_list = data["message"]["body"]["track_list"]
         songs = []
         for song_data in song_list:

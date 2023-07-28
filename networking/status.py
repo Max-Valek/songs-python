@@ -1,9 +1,19 @@
 # Information about API responses
 class Status:
 
-    # Returns a message associated with a specified status code.
     @staticmethod
     def get_message(status_code):
+        """Returns a message associated with a specified status code.
+
+        Parameters:
+            status_code:
+                The HTTP status code of a request response.
+
+        Returns:
+            str:
+                The message associated with the status code.
+        """
+        
         match status_code:
             case 200: return "Success!"
             case 400: return "The request had bad syntax or was inherently impossible to be satisfied."
